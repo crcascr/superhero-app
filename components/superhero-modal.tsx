@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { Superhero } from "@/interfaces";
 import { HiXCircle } from "react-icons/hi2";
