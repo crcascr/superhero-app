@@ -6,7 +6,12 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_API_BASE_URL: process.env.NEXT_PUBLIC_API_BASE_URL,
   },
   images: {
-    domains: ["sc-technical-test-files.s3.amazonaws.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: '"sc-technical-test-files.s3.amazonaws.com"',
+      },
+    ],
   },
 };
 
