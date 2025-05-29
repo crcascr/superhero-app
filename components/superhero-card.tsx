@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Superhero } from "@/interfaces";
-import { getAlignmentColor } from "@/utils";
+import { capitalizeFirstLetter, getAlignmentColor } from "@/utils";
 
 interface Props {
   superhero: Superhero;
@@ -29,7 +29,7 @@ export const SuperheroCard = ({ superhero, onClick }: Props) => {
               { alignment: superhero.biography?.alignment }
             )}`}
           >
-            {superhero.biography?.alignment || "Unknown"}
+            {capitalizeFirstLetter(superhero.biography?.alignment || "Unknown")}
           </span>
         </div>
       </div>
