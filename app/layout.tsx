@@ -11,6 +11,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Superhero Database",
   description: "Explore the world of superheroes",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
