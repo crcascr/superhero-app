@@ -55,14 +55,16 @@ export const SuperheroModal = ({ superheroId, isOpen, onClose }: Props) => {
               <div>
                 <div className="relative h-80 w-full mb-4">
                   <Image
-                    src={superhero.images?.lg || "/placeholder-hero.jpg"}
+                    src={superhero.images?.lg || "/placeholder-hero.png"}
                     alt={superhero.name}
                     fill
                     className="object-cover rounded-lg"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src =
-                        "/placeholder-hero.jpg";
+                        "/placeholder-hero.png";
                     }}
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    priority
                   />
                 </div>
 

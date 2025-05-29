@@ -15,7 +15,8 @@ export const MainComponent = () => {
   const [selectedHeroId, setSelectedHeroId] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  const pageSize = 12;
+  const pageSize: number = 12;
+
   const {
     data: superheroes,
     error: error,

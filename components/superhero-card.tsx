@@ -15,13 +15,15 @@ export const SuperheroCard = ({ superhero, onClick }: Props) => {
     >
       <div className="relative h-64 w-full">
         <Image
-          src={superhero.images?.md || "/placeholder-hero.jpg"}
+          src={superhero.images?.md || "/placeholder-hero.png"}
           alt={superhero.name}
           fill
           className="object-cover rounded-t-lg"
           onError={(e) => {
-            (e.target as HTMLImageElement).src = "/placeholder-hero.jpg";
+            (e.target as HTMLImageElement).src = "/placeholder-hero.png";
           }}
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
         />
         <div className="absolute top-2 right-2">
           <span
